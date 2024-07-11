@@ -18,20 +18,20 @@
   
     <meta name="description" content="三人行，必有我师焉">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20240711">
+<meta property="og:title" content="拓展学习_20240711">
 <meta property="og:url" content="https://shnanch.github.io/2024/07/11/20240711%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB/index.html">
 <meta property="og:site_name" content="捕风机">
 <meta property="og:description" content="三人行，必有我师焉">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-11T13:31:32.000Z">
-<meta property="article:modified_time" content="2024-07-11T13:32:47.853Z">
+<meta property="article:modified_time" content="2024-07-11T14:32:47.425Z">
 <meta property="article:author" content="SHanF">
 <meta property="article:tag" content="阅读">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>20240711 - 捕风机</title>
+  <title>拓展学习_20240711 - 捕风机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -95,7 +95,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>SHanF</strong>
+      <strong>捕风机</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="20240711"></span>
+            <span id="subtitle" data-typed-text="拓展学习_20240711"></span>
           
         </div>
 
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          693 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          1 分钟
+          6 分钟
         
       </span>
     
@@ -268,12 +268,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">20240711</h1>
+            <h1 id="seo-header">拓展学习_20240711</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年7月11日晚上9点32分
+                    本文最后更新于 2024年7月11日晚上10点32分
                   
                 
               </p>
@@ -281,7 +281,27 @@
             
               <div class="markdown-body">
                 
-                
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今年初笔者换工作后，兴许是工作内容重心的变化，或是工作心态的变化，突变成了一只互联网海绵，持续的输入输出，有一种自己终于开始做“安全”的错觉。</p>
+<p>拓展学习是一直计划开的新系列，意在记录平时看到的文章及文章中相关技术的延申学习。</p>
+<p>本篇本应该是拓展学习_20240708，奈何笔者本周一直处于一种精神崩散的状态，工作结束后只想放空不想思考，因此开篇拖延到今日。</p>
+<h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p>今日拓展学习来源于一日早晨刷到公众号（君哥的体历）推送的一篇文章：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/dPGKGcJ1wP9GS6ax56cJPg">关于员工上网行为管理与防范恶意域名的策略探讨| 总第253周</a>，就上网行为管理能否防恶意域名外联的问题做了讨论总结。以下是笔者觉得非常言之有理的观点：</p>
+<blockquote>
+<p>“还不如按照岗位隔了网络呢，这策略一下，员工不得拿AK突突突了安全。”</p>
+<p>“一定是抓大放小的， 安全有时候别把自己当上帝，容易被上帝制裁。”</p>
+</blockquote>
+<h2 id="拓展学习1-DoH"><a href="#拓展学习1-DoH" class="headerlink" title="拓展学习1 - DoH"></a>拓展学习1 - DoH</h2><p>略。</p>
+<p>哈哈哈，因为笔者在前期写应急预案（域名劫持场景）时，对DoH（DNS over HTTPS）稍作了了解，简单言之即在DNS协议外套壳SSL加密，DNS和DoH的关系类同于HTTP和HTTPS。</p>
+<p>在用PC也使用了DoH，采用阿里和腾讯的DNS服务器。体感上来看访问速度确实稍慢，并且在笔者做终端安全产品PoC测试时，发现会影响产品效果，应该与之通过流量劫持实现有关。</p>
+<h2 id="拓展学习2-CDN域前置"><a href="#拓展学习2-CDN域前置" class="headerlink" title="拓展学习2 - CDN域前置"></a>拓展学习2 - CDN域前置</h2><p>关于CDN域前置，阅读：<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/network/276159.html">域前置攻击复现 | 域前置水太深，偷学六娃来隐身</a>。</p>
+<p>简单来说即在DNS解析请求时，请求解析域名为CDN非恶意域名，而CDN获取请求后回源至攻击源。此种情况下，流量检测类设备可能无法识别出外联恶意请求。</p>
+<h2 id="拓展学习3-C2隐匿"><a href="#拓展学习3-C2隐匿" class="headerlink" title="拓展学习3 - C2隐匿"></a>拓展学习3 - C2隐匿</h2><p>在搜索“CDN域前置”时，其在文章经常被作为C2隐匿手段之一来介绍。阅读：</p>
+<p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/12624?time__1311=mqmhDvqIxGxUxeqGNIeSYQD=XxAKDktKGeD&alichlgref=https://cn.bing.com/">C2隐匿-云函数&amp;域前置</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.anquanke.com/post/id/238142#h2-7">红队攻防基础建设—C2 IP隐匿技术</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.anquanke.com/post/id/239640">红队攻防基础建设—神隐之路</a></p>
+<h2 id="拓展学习4-ngrok"><a href="#拓展学习4-ngrok" class="headerlink" title="拓展学习4 - ngrok"></a>拓展学习4 - ngrok</h2><p>官网：<a target="_blank" rel="noopener" href="https://ngrok.com/">ngrok is a tool that lets you expose local servers and services to the internet. </a></p>
+<p>反代工具，可作内网穿透用。第一次见到这个名字是在chaitin的全流量监测demo环境，没想到这么快就再见面。</p>
+<h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>在本篇中分享的链接仍有不少内容可以更进一步延展，“而知也无涯”呀。</p>
+
                 
               </div>
             
@@ -326,7 +346,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>20240711</div>
+      <div>拓展学习_20240711</div>
       <div>https://shnanch.github.io/2024/07/11/20240711拓展阅读/</div>
     </div>
     <div class="license-meta">
@@ -382,8 +402,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/02/%E6%96%87%E7%AB%A0/" title="已阅好文20240702">
-                        <span class="hidden-mobile">已阅好文20240702</span>
+                      <a href="/2024/07/02/%E6%96%87%E7%AB%A0/" title="已阅好文_20240702">
+                        <span class="hidden-mobile">已阅好文_20240702</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
